@@ -17,8 +17,9 @@ const Banner = () => {
             </CustomTypography>
 
             <CustomTypography variant="h2">
-              Get An Unforgettable Event <br /> Experience With us
+              Get An Unforgettable Event
             </CustomTypography>
+            <CustomTypography variant="h2">Experience With us</CustomTypography>
 
             <CustomTypography sx={{ color: '#F4F4F4' }}>
               Duis consectetur urna ac urna sollicitudin, in porta metus
