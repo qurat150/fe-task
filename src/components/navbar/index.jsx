@@ -1,19 +1,20 @@
 import { useState } from 'react';
+import {
+  Box,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
 import { FiSearch } from 'react-icons/fi';
-import { StyledAppBar, StyledNavLogoText } from './ui';
+
+import { StyledAppBar, StyledNavButton, StyledNavLogoText } from './ui';
+import { FlexBox } from 'styles';
 
 const pages = [
   'Home',
@@ -38,32 +39,26 @@ function Navbar() {
     <StyledAppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <StyledNavLogoText variant="h6">LOGO</StyledNavLogoText>
-
-          <Box
+          <StyledNavLogoText
             sx={{
-              flexGrow: 0,
-              display: { xs: 'none', md: 'flex' },
-              alignItems: 'center',
-              mr: 1,
+              display: {
+                xs: 'none',
+                md: 'flex',
+              },
             }}
+            variant="h6"
           >
+            LOGO
+          </StyledNavLogoText>
+
+          <FlexBox display={{ xs: 'none', md: 'flex' }} alignItems="center">
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  mr: 2,
-                  color: 'white',
-                  display: 'block',
-                  textTransform: 'inherit',
-                }}
-              >
+              <StyledNavButton key={page} onClick={handleCloseNavMenu}>
                 {page}
-              </Button>
+              </StyledNavButton>
             ))}
-            <FiSearch />
-          </Box>
+            <FiSearch style={{ color: '#7E33FF' }} />
+          </FlexBox>
 
           {/* Responsive */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -97,30 +92,25 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography color="black" textAlign="center">
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+          <StyledNavLogoText
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              display: {
+                xs: 'flex',
+                md: 'none',
+              },
             }}
+            variant="h6"
           >
-            LOGOs
-          </Typography>
+            LOGO
+          </StyledNavLogoText>
         </Toolbar>
       </Container>
     </StyledAppBar>

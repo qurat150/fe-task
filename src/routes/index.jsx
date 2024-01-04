@@ -1,7 +1,6 @@
-import AuthLayout from 'layouts/AuthLayout';
-import MainLayout from 'layouts/MainLayout';
-import ErrorLayout from 'layouts/ErrorLayout';
-import { Home } from 'pages';
+import { AuthLayout, ErrorLayout, MainLayout } from 'layouts';
+import { About, ContactUs, Home, Services } from 'pages';
+import Projects from 'pages/projects';
 
 export const routes = (auth) => [
   {
@@ -10,10 +9,19 @@ export const routes = (auth) => [
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <>
+            <Home />
+            <About />
+            <Services />
+            <Projects />
+            <ContactUs />
+          </>
+        ),
       },
     ],
   },
+
   {
     path: '/',
     element: <AuthLayout isLoggedIn={auth.isLoggedIn} />,
@@ -22,11 +30,5 @@ export const routes = (auth) => [
   {
     path: '*',
     element: <ErrorLayout />,
-    children: [
-      {
-        index: true,
-        element: <h1>404 not found</h1>,
-      },
-    ],
   },
 ];

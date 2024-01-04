@@ -11,6 +11,7 @@ export const theme = createTheme({
   },
 
   typography: {
+    fontFamily: `"Syne", sans-serif`,
     allVariants: {
       color: 'white',
     },
