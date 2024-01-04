@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Noto+Sans+Linear+B&family=Syne&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Neucha', cursive;
+  font-family: 'Noto Sans Linear B', sans-serif; */
+  font-family: 'Syne', sans-serif;
+}
+
+/* @font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/roboto/Roboto-Light.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/roboto/Roboto-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/roboto/Roboto-Bold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/roboto/Roboto-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+body {
+  font-family: Roboto;
+} */
