@@ -7,7 +7,7 @@ export const BorderCard = styled(Card)(({ backgroundColor, theme }) => ({
   backgroundColor: backgroundColor,
   margin: '10px',
   minHeight: '200px',
-  minWidth: '400px',
+  minWidth: '350px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
